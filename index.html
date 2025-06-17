@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="style/style.css">
+	<title>Pedro Ribeiro | Portfólio</title>
+</head>
+<body>
+
+	<script src="scripts/main.js"></script>
+	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+	<header class="nav">
+		<ul>
+			<li><a class="nav-links" href="#">Home</a></li>
+			<li><a class="nav-links" href="#sobre">Sobre</a></li>
+			<li><a class="nav-links" href="#habilidades">Habilidades</a></li>
+			<li><a class="nav-links" href="#projetos">Projetos</a></li>
+			<li><a class="nav-links" href="#contato">Contato</a></li>
+		</ul>
+		<button class="switch" onclick="toggleDarkMode()">
+			<i class="bi bi-moon-fill"></i>
+		</button>
+	</header>	
+
+	<div id="sobre" class="grid-sobre">
+		<img class="perfil" src="imgs/perfil.png" alt="Foto Pessoal">
+		<div class="grid-texto">
+			<h1>Me chamo Pedro!</h1>
+			<p>Sou um estudante de Análise e Desenvolvimento de Sistemas com formação técnica em andamento pelo SENAI. Tenho interesse em desenvolvimento backend, com foco em Python, banco de dados e controle de versões com Git. Busco oportunidades que me permitam evoluir como desenvolvedor, contribuir com projetos desafiadores e aplicar na prática o que venho aprendendo nos estudos. Tenho facilidade com lógica de programação, sou curioso, proativo e estou sempre disposto a aprender mais.</p>
+		</div>
+	</div>
+
+	<div id="habilidades" class="grid-habilidades">
+		<h1>Habilidades:</h1>
+		<div class="carrossel">
+			<div class="carrossel-track">
+				<i class="fab fa-python"></i>
+				<i class="fab fa-html5"></i>
+				<i class="fab fa-css3-alt"></i>
+				<i class="fab fa-linux"></i>
+				<i class="fas fa-database"></i>
+				<i class="fab fa-git-alt"></i>
+				<i class="fab fa-github"></i>
+				<i class="fab fa-microsoft"></i>
+		  
+				<i class="fab fa-python"></i>
+				<i class="fab fa-html5"></i>
+				<i class="fab fa-css3-alt"></i>
+				<i class="fab fa-linux"></i>
+				<i class="fas fa-database"></i>
+				<i class="fab fa-git-alt"></i>
+				<i class="fab fa-github"></i>
+				<i class="fab fa-microsoft"></i>
+			</div>
+		</div>
+	</div>
+
+	<div id="projetos" class="grid-projetos">
+		<h1 class="grid-nome">Projetos:</h1>
+		<div class="cards">
+			<div class="card-1">
+				<img src="imgs/cards/card-1.jpeg" alt="">
+				<h1 class="card-nome">Projeto Black Noir</h1>
+				<div class="card-links">
+					<a href="https://pribero.github.io/ProjetoWebSite-BlackNoir/" target="_blank">Testar</a>
+					<a href="https://github.com/pribero/ProjetoWebSite-BlackNoir" target="_blank">GitHub</a>
+				</div>
+			</div>
+			<div class="card-1">
+				<img src="imgs/cards/card-1.png" alt="">
+				<h1 class="card-nome">Projeto Hotel MOOD</h1>
+				<div class="card-links">
+					<a href="https://github.com/Dxniel804/django-hotelaria-final" target="_blank">GitHub</a>
+				</div>
+			</div>
+			<div class="card-1">
+				<img src="imgs/cards/card-3.png" alt="">
+				<h1 class="card-nome">Projeto mood.</h1>
+				<div class="card-links">
+					<a href="https://pribero.github.io/Projeto---JS/" target="_blank">Testar</a>
+					<a href="https://github.com/pribero/Projeto---JS" target="_blank">GitHub</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="contato" class="grid-contato">
+		<h1 class="grid-nome">Contato:</h1>
+
+		<div class="redes-sociais">
+			<a href="https://github.com/pribero" target="_blank" class="icon github">
+			  <i class="fab fa-github"></i>
+			</a>
+			<a href="https://www.linkedin.com/in/pedro-ribeiro-25509a2b6/" target="_blank" class="icon linkedin">
+			  <i class="fab fa-linkedin-in"></i>
+			</a>
+			<a href="https://www.instagram.com/riberokk" target="_blank" class="icon instagram">
+			  <i class="fab fa-instagram"></i>
+			</a>
+		</div>
+	</div>
+</body>
+</html>
