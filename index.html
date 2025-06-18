@@ -14,23 +14,57 @@
 	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 	<header class="nav">
-		<ul>
-			<li><a class="nav-links" href="#">Home</a></li>
-			<li><a class="nav-links" href="#sobre">Sobre</a></li>
-			<li><a class="nav-links" href="#habilidades">Habilidades</a></li>
-			<li><a class="nav-links" href="#projetos">Projetos</a></li>
-			<li><a class="nav-links" href="#contato">Contato</a></li>
-		</ul>
+		<!-- Botão do menu hamburguer -->
+		<button class="hamburger" onclick="document.getElementById('menuDialog').showModal()">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+
+		<div class="nav-desktop">
+			<ul>
+				<li><a href="#" onclick="menuDialog.close()">Home</a></li>
+				<li><a href="#sobre" onclick="menuDialog.close()">Sobre</a></li>
+				<li><a href="#habilidades" onclick="menuDialog.close()">Habilidades</a></li>
+				<li><a href="#projetos" onclick="menuDialog.close()">Projetos</a></li>
+				<li><a href="#contato" onclick="menuDialog.close()">Contato</a></li>
+			</ul>
+		</div>
+	
+		<!-- Botão de modo escuro -->
 		<button class="switch" onclick="toggleDarkMode()">
 			<i class="bi bi-moon-fill"></i>
 		</button>
-	</header>	
+	</header>
+	
+	<!-- Menu <dialog> -->
+		<dialog id="menuDialog" class="nav-dialog" style="display: none;">
+		<ul>
+			<li><a href="#" onclick="menuDialog.close()">Home</a></li>
+			<li><a href="#sobre" onclick="menuDialog.close()">Sobre</a></li>
+			<li><a href="#habilidades" onclick="menuDialog.close()">Habilidades</a></li>
+			<li><a href="#projetos" onclick="menuDialog.close()">Projetos</a></li>
+			<li><a href="#contato" onclick="menuDialog.close()">Contato</a></li>
+		</ul>
+		<button onclick="document.getElementById('menuDialog').close()">Fechar</button>
+	</dialog>
 
 	<div id="sobre" class="grid-sobre">
 		<img class="perfil" src="imgs/perfil.png" alt="Foto Pessoal">
 		<div class="grid-texto">
 			<h1>Me chamo Pedro!</h1>
 			<p>Sou um estudante de Análise e Desenvolvimento de Sistemas com formação técnica em andamento pelo SENAI. Tenho interesse em desenvolvimento backend, com foco em Python, banco de dados e controle de versões com Git. Busco oportunidades que me permitam evoluir como desenvolvedor, contribuir com projetos desafiadores e aplicar na prática o que venho aprendendo nos estudos. Tenho facilidade com lógica de programação, sou curioso, proativo e estou sempre disposto a aprender mais.</p>
+			<div class="redes-sociais">
+				<a href="https://github.com/pribero" target="_blank" class="icon github">
+				  <i class="fab fa-github"></i>
+				</a>
+				<a href="https://www.linkedin.com/in/pedro-ribeiro-25509a2b6/" target="_blank" class="icon linkedin">
+				  <i class="fab fa-linkedin-in"></i>
+				</a>
+				<a href="mailto:pedro.rib08@gmail.com" target="_blank" class="icon email">
+					<i class="bi bi-envelope"></i>
+				</a>
+			</div>
 		</div>
 	</div>
 
@@ -85,11 +119,48 @@
 					<a href="https://github.com/pribero/Projeto---JS" target="_blank">GitHub</a>
 				</div>
 			</div>
+			<div class="card-1">
+				<img src="imgs/cards/card-4.png" alt="">
+				<h1 class="card-nome">Projeto HandTracking</h1>
+				<div class="card-links">
+					<a href="https://github.com/ccadu86/HAND_TRACKING" target="_blank">GitHub</a>
+				</div>
+			</div>
+			<div class="card-1">
+				<img src="imgs/cards/card-5.png" alt="">
+				<h1 class="card-nome">Projeto App Produtividade</h1>
+				<div class="card-links">
+					<a href="blob:https://web.whatsapp.com/ce5bdee9-7965-4236-81bb-49136ed01d0a" target="_blank">Download  <i class="bi bi-android2"></i></a>
+					<a href="https://github.com/Pincinato07/App-produtividade" target="_blank">GitHub</a>
+				</div>
+			</div>
 		</div>
 	</div>
 
 	<div id="contato" class="grid-contato">
 		<h1 class="grid-nome">Contato:</h1>
+		<p class="descricao">Tem alguma pergunta, proposta ou só quer trocar uma ideia? Preencha o formulário abaixo!</p>
+
+		<div class="contact-form">
+            <form action="https://formspree.io/f/xeokkyao" method="POST">
+                <div class="form-group">
+                    <label for="email">Seu e-mail:</label>
+                    <input type="email" name="email" id="email" required placeholder="seu@email.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Sua mensagem:</label>
+                    <textarea name="message" id="message" required placeholder="Digite sua mensagem aqui..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Enviar</button>
+            </form>
+        </div>
+
+	</div>
+
+	<footer	class="footer">
+		<p>© 2025 Pedro Ribeiro. Todos os direitos reservados.</p>
 
 		<div class="redes-sociais">
 			<a href="https://github.com/pribero" target="_blank" class="icon github">
@@ -98,10 +169,11 @@
 			<a href="https://www.linkedin.com/in/pedro-ribeiro-25509a2b6/" target="_blank" class="icon linkedin">
 			  <i class="fab fa-linkedin-in"></i>
 			</a>
-			<a href="https://www.instagram.com/riberokk" target="_blank" class="icon instagram">
-			  <i class="fab fa-instagram"></i>
+			<a href="mailto:pedro.rib08@gmail.com" target="_blank" class="icon email">
+				<i class="bi bi-envelope"></i>
 			</a>
 		</div>
-	</div>
+	</footer>
+
 </body>
 </html>
