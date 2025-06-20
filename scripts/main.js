@@ -1,55 +1,63 @@
-function toggleDarkMode() {
-  document.body.classList.toggle('dark-mode');
-}
-
-document.getElementById('form-contato').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const nome = document.getElementById('nome').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const mensagem = document.getElementById('mensagem').value.trim();
-
-  if(nome && email && mensagem) {
-    document.getElementById('resposta').style.display = 'block';
-    document.getElementById('resposta').textContent = `Valeu pelo contato, ${nome}! Te respondo em breve.`;
-    this.reset();
-  } else {
-    alert('Preencha todos os campos certinho!');
-  }
-});
-
-// Form interactions
-document.addEventListener('DOMContentLoaded', function() {
-  const inputs = document.querySelectorAll('input, textarea');
-  
-  inputs.forEach(input => {
-      input.addEventListener('focus', function() {
-          this.parentElement.classList.add('focused');
-      });
-      
-      input.addEventListener('blur', function() {
-          this.parentElement.classList.remove('focused');
-      });
+document.addEventListener('DOMContentLoaded', () => {
+  // Toggle modo escuro
+  const btnToggleTheme = document.getElementById('btnToggleTheme');
+  btnToggleTheme.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
   });
 
-  // Form submission feedback
-  const form = document.querySelector('form');
+  // Formulário
+  const formContato = document.getElementById('form-contato');
+  const resposta = document.getElementById('resposta');
   const submitBtn = document.querySelector('.submit-btn');
-  
-  form.addEventListener('submit', function(e) {
-      submitBtn.textContent = 'Enviando...';
-      submitBtn.disabled = true;
-      
-      // Reset after 3 seconds (for demo purposes)
-      setTimeout(() => {
-          submitBtn.textContent = 'Enviar';
-          submitBtn.disabled = false;
-      }, 3000);
+
+  formContato.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const nome = formContato.nome.value.trim();
+    const email = formContato.email.value.trim();
+    const mensagem = formContato.mensagem.value.trim();
+
+    if (!nome || !email || !mensagem) {
+      alert('Preencha todos os campos certinho!');
+      return;
+    }
+
+    // Feedback no botão
+    submitBtn.textContent = 'Enviando...';
+    submitBtn.disabled = true;
+
+    setTimeout(() => {
+      resposta.style.display = 'block';
+      resposta.textContent = `Valeu pelo contato, ${nome}! Te respondo em breve.`;
+      formContato.reset();
+      submitBtn.textContent = 'Enviar';
+      submitBtn.disabled = false;
+    }, 1500);
   });
+
+  // Animação foco inputs
+  const inputs = document.querySelectorAll('input, textarea');
+  inputs.forEach(input => {
+    input.addEventListener('focus', () => {
+      input.parentElement.classList.add('focused');
+    });
+    input.addEventListener('blur', () => {
+      input.parentElement.classList.remove('focused');
+    });
+  });
+
+  // Menu modal
+  const menuDialog = document.getElementById('menuDialog');
+  window.openMenu = function() {
+    if (menuDialog?.showModal) {
+      menuDialog.showModal();
+    } else {
+      alert('Seu navegador não suporta menu modal.');
+    }
+  };
+  window.closeMenu = function() {
+    if (menuDialog?.close) {
+      menuDialog.close();
+    }
+  };
 });
-
-
-const menuDialog = document.getElementById('menuDialog');
-  if (menuDialog.open) {
-    menuDialog.close();
-  }
-

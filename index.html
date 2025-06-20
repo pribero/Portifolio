@@ -20,32 +20,34 @@
 
 		<div class="nav-desktop">
 			<ul>
-				<li><a href="#" onclick="menuDialog.close()">Home</a></li>
-				<li><a href="#sobre" onclick="menuDialog.close()">Sobre</a></li>
-				<li><a href="#habilidades" onclick="menuDialog.close()">Habilidades</a></li>
-				<li><a href="#projetos" onclick="menuDialog.close()">Projetos</a></li>
-				<li><a href="#cursos" onclick="menuDialog.close()">Cursos</a></li>
-				<li><a href="#contato" onclick="menuDialog.close()">Contato</a></li>
+				<li><a href="#" >Home</a></li>
+				<li><a href="#sobre" >Sobre</a></li>
+				<li><a href="#habilidades" >Habilidades</a></li>
+				<li><a href="#projetos" >Projetos</a></li>
+				<li><a href="#cursos" >Cursos</a></li>
+				<li><a href="#contato" >Contato</a></li>
 			</ul>
 		</div>
 	
 		<!-- Botão de modo escuro -->
-		<button class="switch" onclick="toggleDarkMode()">
+		<button id="btnToggleTheme" class="switch" aria-label="Alternar modo escuro">
 			<i class="bi bi-moon-fill"></i>
-		</button>
+		  </button>
+		  
 	</header>
 	
 	<!-- Menu <dialog> -->
-		<dialog id="menuDialog" class="nav-dialog" style="display: none;">
+	<dialog id="menuDialog" class="nav-dialog">
+		<button class="fechar-menu" onclick="document.getElementById('menuDialog').close()">&times;</button>
+		  
 		<ul>
-			<li><a href="#" onclick="menuDialog.close()">Home</a></li>
-			<li><a href="#sobre" onclick="menuDialog.close()">Sobre</a></li>
-			<li><a href="#habilidades" onclick="menuDialog.close()">Habilidades</a></li>
-			<li><a href="#projetos" onclick="menuDialog.close()">Projetos</a></li>
-			<li><a href="#cursos" onclick="menuDialog.close()">Cursos</a></li>
-			<li><a href="#contato" onclick="menuDialog.close()">Contato</a></li>
+			<li><a href="#" onclick="closeMenu()">Home</a></li>
+			<li><a href="#sobre" onclick="closeMenu()">Sobre</a></li>
+			<li><a href="#habilidades" onclick="closeMenu()">Habilidades</a></li>
+			<li><a href="#projetos" onclick="closeMenu()">Projetos</a></li>
+			<li><a href="#cursos" onclick="closeMenu()">Cursos</a></li>
+			<li><a href="#contato" onclick="closeMenu()">Contato</a></li>
 		</ul>
-		<button onclick="document.getElementById('menuDialog').close()">Fechar</button>
 	</dialog>
 
 	<div id="sobre" class="grid-sobre">
@@ -224,7 +226,7 @@
 	<a href="#topo" class="botao-topo">↑</a>
 
 	<script src="scripts/main.js"></script>
-	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </body>
 </html>
