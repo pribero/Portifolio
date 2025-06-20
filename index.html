@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="style/style.css">
 	<title>Pedro Ribeiro | Portfólio</title>
 </head>
-<body>
+<body id="topo">
 
 	<script src="scripts/main.js"></script>
 	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -61,8 +61,8 @@
 				<a href="https://www.linkedin.com/in/pedro-ribeiro-25509a2b6/" target="_blank" class="icon linkedin">
 				  <i class="fab fa-linkedin-in"></i>
 				</a>
-				<a href="mailto:pedro.rib08@gmail.com" target="_blank" class="icon email">
-					<i class="bi bi-envelope"></i>
+				<a href="curriculo/PEDRO RIBEIRO.pdf" target="_blank" class="icon email">
+					<i class="bi bi-filetype-pdf"></i>
 				</a>
 			</div>
 		</div>
@@ -137,26 +137,73 @@
 		</div>
 	</div>
 
+	<div id="cursos" class="grid-cursos">
+		<h2 class="grid-nome">Cursos: </h2>
+		<div class="cursos-container">
+			<div class="curso-card">
+				<h3 class="curso-nome">Competência Transversal - Segurança no Trabalho</h3>
+				<p>Senai - 2024</p>
+				<a class="curso" href="certificados/seguranca-tranalho.pdf" target="_blank">Ver certificado</a>
+			</div>
+			<div class="curso-card">
+				<h3 class="curso-nome">Desvendando o 5G</h3>
+				<p>Senai - 2024</p>
+				<a class="curso" href="certificados/desvendando-5g.pdf" target="_blank">Ver certificado</a>
+			</div>
+			<div class="curso-card">
+				<h3 class="curso-nome">Economia Circular</h3>
+				<p>Senai - 2024</p>
+				<a class="curso" href="certificados/economia-circular.pdf" target="_blank">Ver certificado</a>
+			</div>
+			<div class="curso-card">
+				<h3 class="curso-nome">Privacidade e Proteção de Dados (LGPD)</h3>
+				<p>Senai - 2024</p>
+				<a class="curso" href="certificados/lgpd.pdf" target="_blank">Ver certificado</a>
+			</div>
+		  	<div class="curso-card">
+				<h3 class="curso-nome">Excel do Básico ao Avançado</h3>
+				<p>Udemy - 2024</p>
+				<a class="curso" href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-944fa93f-7fff-4d6e-a0b0-fa2d0eac6a86.pdf" target="_blank">Ver certificado</a>
+		  	</div>
+		  	<div class="curso-card">
+				<h3 class="curso-nome">Microsoft AI-900</h3>
+				<p>Microsoft Learns - 2024</p>
+				<a class="curso" href="certificados/ai-900.pdf" target="_blank">Ver certificado</a>
+		  	</div>
+		  	<div class="curso-card">
+				<h3 class="curso-nome">Fundamentos do Python 1</h3>
+				<p>Cisco - 2025</p>
+				<a class="curso" href="certificados/fundamentos-python.pdf" target="_blank">Ver certificado</a>
+		  	</div>
+		  	<div class="curso-card">
+				<h3 class="curso-nome">Fundamentos do Python 2</h3>
+				<p>Cisco - 2025</p>
+				<a href="#" class="cursando" >Cursando</a>
+		  	</div>
+		  	<div class="curso-card">
+				<h3 class="curso-nome">Python para DataScience</h3>
+				<p>Senai - 2025</p>
+				<a href="#" class="cursando" >Cursando</a>
+		  	</div>
+		</div>
+	</div>
+
 	<div id="contato" class="grid-contato">
 		<h1 class="grid-nome">Contato:</h1>
 		<p class="descricao">Tem alguma pergunta, proposta ou só quer trocar uma ideia? Preencha o formulário abaixo!</p>
-
 		<div class="contact-form">
             <form action="https://formspree.io/f/xeokkyao" method="POST">
                 <div class="form-group">
                     <label for="email">Seu e-mail:</label>
                     <input type="email" name="email" id="email" required placeholder="seu@email.com">
                 </div>
-                
                 <div class="form-group">
                     <label for="message">Sua mensagem:</label>
                     <textarea name="message" id="message" required placeholder="Digite sua mensagem aqui..."></textarea>
                 </div>
-                
                 <button type="submit" class="submit-btn">Enviar</button>
             </form>
         </div>
-
 	</div>
 
 	<footer	class="footer">
@@ -169,11 +216,13 @@
 			<a href="https://www.linkedin.com/in/pedro-ribeiro-25509a2b6/" target="_blank" class="icon linkedin">
 			  <i class="fab fa-linkedin-in"></i>
 			</a>
-			<a href="mailto:pedro.rib08@gmail.com" target="_blank" class="icon email">
-				<i class="bi bi-envelope"></i>
+			<a href="curriculo/PEDRO RIBEIRO.pdf" target="_blank" class="icon email">
+				<i class="bi bi-filetype-pdf"></i>
 			</a>
 		</div>
 	</footer>
+
+	<a href="#topo" class="botao-topo">↑</a>
 
 </body>
 </html>

@@ -52,3 +52,4 @@ const menuDialog = document.getElementById('menuDialog');
   if (menuDialog.open) {
     menuDialog.close();
   }
+
